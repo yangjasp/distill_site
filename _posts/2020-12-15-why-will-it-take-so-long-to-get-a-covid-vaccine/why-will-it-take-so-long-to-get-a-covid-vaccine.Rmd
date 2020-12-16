@@ -1,0 +1,43 @@
+---
+title: "Why Will it Take so Long to Get a COVID Vaccine?"
+description: 
+author:
+date: 12-15-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+<font size = "2.0"> <p style="line-height:1.0 "> Note: I originally published this post on a previous blog on March 24, 2020. It's pretty cool that today is the second day of vaccine administration in the US! </p></font> 
+
+As I write this post, the global COVID-19 recorded cases count has surpassed 350,000, and that number could easily become 1 million within the next couple weeks. For all we know, it could already be much closer to that point given the extreme amount of unreported cases. The United States and most of Europe have imposed extreme social distancing measures to slow the spread, but it seems that we have long passed the point where the virus dying out on its own is a possibility anytime soon. 
+
+Barring an extreme twist, humans will need to develop herd immunity to the virus in order to stop its spread. That is, approximately two-thirds of us must become immune to COVID-19 in order to stop its transmission among the population. The only two ways for that to happen are for two-thirds of us to contract it, a devastating scenario, or for a vaccine to be developed and distributed extensively. Scientists across the world have been scrambling to make the latter scenario reality ever since [Chinese researchers discovered and released the virus genetic sequence in January](https://time.com/5790545/first-covid-19-vaccine/) and governments have rightfully poured funding behind them. Still, NIAID director Anthony Fauci has made it [clear](https://time.com/5790545/first-covid-19-vaccine/) that a best-case scenario is that the vaccine will be ready in 12 to 18 months. With so many resources being poured into this project, why can’t it be any quicker?
+
+## Developing a Vaccine
+
+Over [30 labs across the world](https://milkeninstitute.org/sites/default/files/2020-03/Covid19%20Tracker_WEB.pdf) have already developed vaccine products that might be effective in generating immunity to the novel Coronavirus. In general, they employ techniques used in established vaccines such as the one for influenza which involve exposing the immune system to weakened versions or pieces of the virus to generate antibodies that will allow the body to recognize and fight off the actual virus if it becomes infected. The majority of these vaccines are in the pre-clinical stage meaning that they have not yet been tested in humans. In other words, we don’t know if they are safe, let alone if they work. We have a long way to go until we reach those points. 
+
+## Clinical Trials
+
+Clinical trials are studies conducted in biomedical research to assess the safety and efficacy of a health intervention. Through a number of lengthy phases, human subjects that receive the treatment are closely followed and compared to control subjects that receive a placebo or the industry standard treatment. [Studies have shown](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2953249/) that the average time for a product to reach regulatory approval from the moment it is first tested in humans is around seven years, and the associated costs are approximately $1 billion. In general, there are [three main phases](https://www.nih.gov/health-information/nih-clinical-research-trials-you/basics) of clinical trials that each new product must go through before becoming eligible for government approval, which is required before it is made available to the general public:
+
+* *Phase One:* The treatment is first introduced in humans in phase one. It has typically already gone through animal testing. 20-80 healthy subjects are recruited for this phase and they are closely monitored for side effects. The goal in phase one is simply to assess safety, so the actual efficacy of the drug is not usually measured. Different doses are also frequently tested here to help identify how much of a drug can safely be given to subjects in future phases.
+
+* *Phase Two:* After the treatment has passed through phase one, it is moved into phase two where a few hundred actual patients are given the treatment. Different dosages are compared to a control, and the researchers still concentrate on safety while beginning to look at efficacy, specifically in terms of best dosage and determining the variables that it seems to be best effecting.
+
+* *Phase Three:* If the first two phases suggest that the treatment is safe and shows signs of efficacy, it is passed to phase three. A phase three clinical trial typically enrolls 1,000-3,000 patients that are randomized to the treatment or a control. This is the final stage before approval, so it must demonstrate that the treatment is effective for it to be released to the public. Safety is still measured at this stage, especially rare adverse events that the larger sample size increases the chances of detecting.
+
+These phases are part of the standard protocol that every vaccine must go through. Each one is important and rushing through them means risking the release of a dangerous drug into the entire population. If a vaccine causes potentially fatal side-effects three months after being administered 1 in 150 times, the trial period is meant to catch that before it kills thousands of people. Some drugs, like the yearly flu vaccine, can be rushed through this process because each new annual version is only a [tweaked version of previous ones](https://www.cdc.gov/flu/vaccines-work/effectiveness-studies.htm). The vast majority of other drugs [never make it through at all](https://www.reuters.com/article/us-pharmaceuticals-success/success-rates-for-experimental-drugs-falls-study-idUSTRE71D2U920110214).
+
+The severity of COVID-19 is not enough to warrant putting people at even more risk by completely rushing it through this process. It is important to make sure that the vaccine is safe and effective before nations begin pouring billions of dollars into getting it mass produced and administered. Some parts of the process such as bureaucratic tasks and subject recruitment can be expedited, but there is no getting around the time required to see if the vaccines actually work safely. Getting through the trial stage alone in a year and a half will be extremely difficult, and that is only half the battle.
+
+## Mass Production and Distribution
+
+Even if a vaccine successfully makes it through clinical trials in the next year and a half, it needs to be mass produced and widely distributed for it to have any meaningful benefit to our population. This will be no simple task. The lab that produces the vaccine will likely not have the capabilities to mass produce it, so a larger manufacturing company will need to step in to take over the [multi-billion dollar process](https://www.bostonglobe.com/2020/03/13/opinion/scale-price-coronavirus-vaccine-by-harm-it-averts/). Given the situation, governments will probably play a heavy role in the funding and execution of this stage, but they might be concerned by the distinct possibility that the virus finishes its natural course between the time that the money is spent and time that the vaccine is mass administered. Regardless, such a large-scale production will take months to complete.
+
+At this point the question becomes who gets access to the vaccine first. Is it healthcare workers who are frequently exposed and are the most important players in fighting the disease? Is it the elderly who are most likely to become fatally ill? On top of that, will everyone get it for free?
+If we reach this point, these are all questions that will be asked and heavily debated across the world. We can hope that this won’t slow down potentially life-saving administrations, but the United States’ record of healthcare politics shouldn’t make us too certain. 
+
+## What Does this Mean for Us?
+
+The best thing we can do to keep ourselves and our loved ones safe while we wait for a vaccine to come out is take proper sanitary precautions and social distance. If that isn’t enough for you, see if you can volunteer to be a subject in a clinical trial. Experts across the world are working extremely hard to find a safe and effective vaccine, but time will be required before it can be released no matter how many resources we pour behind it. 

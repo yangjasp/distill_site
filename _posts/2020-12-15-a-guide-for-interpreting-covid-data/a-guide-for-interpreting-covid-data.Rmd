@@ -1,0 +1,79 @@
+---
+title: "A Guide for Interpreting COVID Data"
+description: 
+author:
+date: 12-15-2020
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+<font size = "2.0"> <p style="line-height:1.0 "> Note: I originally published this article on a previous blog on March 22, 2020. We've leanred alot since this, but I have posted this here to show where my thoughts were way back then! </p></font> 
+
+COVID-19 has put most of the world on lockdown, and new data is constantly being released and interpreted by internet “experts” telling you what insights it reveals into our future. While some of it is true, the data is raw, biased, and generally problematic. With the right background knowledge, it can still, however, be useful. This is a guide to avoiding the biggest mistakes when it comes to interpreting Coronavirus data.
+
+## Cases vs. Confirmed Cases: Who has been tested
+
+My twitter feed is crawling with daily updates about case counts in different counties, states, and countries. I can always count on CNN’s daily update of their “[state-by-state breakdown of US Coronavirus cases](https://www.cnn.com/2020/03/03/health/us-coronavirus-cases-state-by-state/index.html)” to be somewhere among them. Tens of thousands of users can click on this article and find an updated chart titled “Coronavirus Cases in US”, a portion of which can be seen below:
+
+<FIGURE>
+
+<IMG SRC= "/Users/jasper/Desktop/SummerWork2020/distill_site/images/InterpetingCOVID/COVIDbyStateScreenshot.png">
+<FIGCAPTION> Source: CNN. Data as of March 22, 2020. </FIGCAPTION> 
+
+
+</FIGURE>
+	
+
+
+
+While it is informative, this chart is quite misleading. By placing these case numbers next to each other in this way, the chart is implying that the states can be directly compared. It even sorts them in descending order, emphasizing the fact that New Jersey is reporting slightly more cases than Washington and almost twice as many as Michigan. 
+
+The most important piece of information on this chart is in the fine print under the title where it states that the data are confirmed cases. Well, obviously, you might think, but what does that really mean? The only way to confirm that someone has COVID-19 is for them to test positive for it. In the United States especially, these tests are [hard to come by](https://www.nytimes.com/interactive/2020/03/17/us/coronavirus-testing-data.html). Even more, each state has [its own protocols](https://www.kiro7.com/news/trending/coronavirus-state-by-state-guide-virus-testing-policies/J75HKFK2BZGUPEH7RCGIONJJMI/) for deciding who is able to get tested, and different testing sites employ different labs to perform the analyses which leads to widespread inconsistencies in reporting. Below is a chart from *Politico* that includes this other r extremely important piece of information. 
+
+<FIGURE>
+
+<IMG SRC= "/Users/jasper/Desktop/SummerWork2020/distill_site/images/InterpetingCOVID/COVIDpolitico.png">
+<FIGCAPTION> Source: Politico. Data as of March 22, 2020. </FIGCAPTION> 
+
+
+</FIGURE>
+
+Here we see that testing varies significantly across states. Whereas the CNN article suggested that Washington State was dealing with approximately the same number of Coronavirus cases as New Jersey, the addition of testing as a detail shows that their true case numbers might actually be quite different. 
+
+## At This Point We Can’t Really Compare Across States
+
+While it seems easy to draw from this information that New Jersey’s true case prevalence is much greater than Washington’s, we really can’t be sure. New Jersey is being much more conservative with their testing than Washington State at the moment since they hit 100 cases much more recently than Washington, and they are only beginning to [ramp up testing now](https://njbmagazine.com/njb-news-now/more-aggressive-restrictions-to-come-as-nj-opens-first-covid-19-testing-site/).  
+Currently, 83.6% of the 2,290 tests in New Jersey have come back positive. If they were to conduct 25,000 more tests today, that percentage would undoubtedly become much lower, but there is no way of telling exactly how much lower without actually testing. 
+
+If we want to be able to make accurate inferences about entire populations, we either need to sample everyone or use a random sampling technique. The current rate of testing is far from either of those, especially considering the fact that many COVID-infected individuals are known to be asymptomatic and aren’t even allowed to get tested. Still yet, we might at least be able to compare confirmed cases across states if testing rates were similar, but we can see that they aren’t even remotely close. The bottom line is don’t let any media outlets, Facebook friends, or the President of the United States fool you by saying there is any certainty here. Any comparison of Coronavirus numbers should be taken with a large grain of salt. 
+
+## Comparisons Across Countries Are Slightly Better
+
+You have probably heard the Coronavirus trajectory of the U.S. being compared to that of other countries hit hard by the virus including China, Italy, and South Korea. Below is a graph showing the path of each country’s confirmed cases count from the day they hit 500 confirmed cases. 
+
+<FIGURE>
+
+<IMG SRC= "/Users/jasper/Desktop/SummerWork2020/distill_site/images/InterpetingCOVID/CountryCOVID.png">
+<FIGCAPTION> Data from JHU CSSE and available [here](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv). </FIGCAPTION> 
+
+
+</FIGURE>
+
+Here we see that the United States is following a dangerous path. Even though testing procedures and rates vary noticeably across these four countries, the sample sizes are much larger than the state-by-state data from the previous section, and the trends this data captures are fairly reflective of the true infection curves. 
+
+South Korea actually has the highest testing rate of any of these countries despite reporting the least number of confirmed cases by far. This is evidence that their low confirmed case tally is not due to a lack of testing, but instead thanks to a quick and effective public health response in comparison to China, the United States, and Italy. 
+
+Comparisons across countries similar to the one illustrated in the graph above are useful in assessing the relative effectiveness of public health responses. Still, they are not perfect and must also be taken with a grain of salt. 
+
+## Using numbers to assess your own danger
+
+Almost everyone knows someone who is in a vulnerable population group, and the thought of becoming infected with COVID-19 as a healthy young person is still very frightening. It is reasonable to be concerned by the exponential rise of recorded case numbers, but it is important to remember that they are summarizing an extremely complex pattern. Just as a case mortality rate of 1.3% does not mean that every person has an equal chance of dying from COVID-19, a nationwide doubling of cases does not necessarily mean the same for everyone in the country. Since most of the case increase is coming out of New York right now, an immunocompromised 80-year-old in Arizona who has been strictly following social distancing protocols has much less to be worried about than a similar New Yorker who only stopped using the subway a few days ago. 
+
+Population-level data is valuable, but it fails to capture key details of the subdivided social, geographical, and economic landscape of this massive country. We need to closely monitor COVID-19 as testing becomes more widespread to see how it disproportionately affects certain groups such as the homeless, undocumented immigrants, and public service workers. The most important patterns in the data are not discernible in the overall picture.
+
+## What to do the next time you come across Coronavirus data
+
+Remember that every piece of Coronavirus data is imperfect and comes with strings attached. Anyone who tries to tell you differently is misleading you. The next time you come across a bit of reported data, question it. Ask yourself what information is missing, what unmeasurable factors could be controlling it, and if the message its presenters are sending is necessarily true. The best tool for navigating through the era of misinformation is skepticism.
+
+*For more information, check out the [COVID Tracking Project](https://covidtracking.com/)*

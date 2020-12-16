@@ -1,0 +1,11 @@
+---
+title: "Welcome to my site"
+description:
+author:
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+Welcome
+
