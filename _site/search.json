@@ -1,0 +1,26 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this blog",
+      "description": "Some additional details about the blog",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2020-12-16T00:12:12-05:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Jasper Yang",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2020-12-16T00:12:13-05:00"
+    },
+    {
+      "path": "README.html",
+      "author": [],
+      "contents": "\ndistill_site\n\n\n",
+      "last_modified": "2020-12-16T00:12:15-05:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}
