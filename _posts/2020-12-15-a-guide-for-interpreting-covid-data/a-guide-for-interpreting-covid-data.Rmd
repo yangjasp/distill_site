@@ -2,6 +2,7 @@
 title: "A Guide for Interpreting COVID Data"
 description: 
 author:
+preview: /Users/jasper/Desktop/SummerWork2020/distill_site/images/InterpetingCOVID/CountryCOVID.png
 date: 12-15-2020
 output:
   distill::distill_article:
