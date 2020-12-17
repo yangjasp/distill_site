@@ -3,9 +3,14 @@ title: "Jasper Yang"
 description: |
   Jasper Yang
 output_dir: "_site"
+base_url: https://yangjasp-personalsite.netlify.app/
+collections:
+  posts:
+    disqus: theprncipalcomponentblog
+    share: [twitter, linkedin]
 navbar:
   right:
-    - text: "Home"
+    - text: "Blog"
       href: index.html
     - text: "About"
       href: about.html

@@ -1,5 +1,9 @@
 ---
-title: "Jasper Yang"
+title: "theprncipalcomponent blog"
 site: distill::distill_website
-listing: posts
+listing: 
+  posts:
+    - 2020-12-15-bayes-theorem-and-covid19
+    - 2020-12-15-whats-the-deal-with-covid-racial-data
+    - 2020-12-15-why-will-it-take-so-long-to-get-a-covid-vaccine
 ---
