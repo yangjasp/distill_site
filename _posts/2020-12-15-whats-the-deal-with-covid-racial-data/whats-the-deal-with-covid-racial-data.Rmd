@@ -1,7 +1,7 @@
 ---
 title: "What's the Deal with COVID Racial Data?"
 description: 
-preview: https://yangjasp-personalsite.netlify.app/images/COVIDRacialData/COVID_Impact_of_Blacks.png
+preview: https://yangjasp-personalsite.netlify.app/docs/images/COVIDRacialData/COVID_Impact_of_Blacks.png
 author:
 date: 12-15-2020
 output:
@@ -25,24 +25,22 @@ We know with certainty that blacks in particular are being disproportionately af
 
 <FIGURE>
 
-<IMG SRC= "https://github.com/yangjasp/distill_site/blob/main/docs/images/COVIDRacialData/COVID_Impact_of_Blacks.png">
+<IMG SRC= "https://yangjasp-personalsite.netlify.app/docs/images/COVIDRacialData/COVID_Impact_of_Blacks.png">
 <FIGCAPTION> Based on COVID data released by state public health departments. 
 Population data retrieved from the US Census Bureau. </FIGCAPTION> 
 
 
 </FIGURE>
-
 This chart illustrates a striking pattern in the state-by-state data so far: blacks are being disproportionately killed by COVID-19, and it's not even close. The states typically report these numbers with an asterisk indicating that the data is incomplete. While this is true, most are reporting racial data on well over 75% deaths. The patterns are clear. Looking even closer at some of the cities that have been hardest by COVID-19, the same frightening trends hold.
 
 <FIGURE>
 
-<IMG SRC= " https://github.com/yangjasp/distill_site/blob/main/docs/images/COVIDRacialData/COVID_in_Cities.png">
+<IMG SRC= "https://yangjasp-personalsite.netlify.app/docs/images/COVIDRacialData/COVID_in_Cities.png">
 <FIGCAPTION> Based on COVID data officially released by cities.
 Population data retrieved from the US Census Bureau. </FIGCAPTION> 
 
 
 </FIGURE>
-
 Given the long history of inequitable health outcomes in the United States, these findings should hardly come as a surprise. But that doesn’t make them any less horrifying. This is convincing evidence that something needs to change right now in the way we deal with the COVID crisis and the ways in which we approach public health in America. 
 
 ## The Causes

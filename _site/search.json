@@ -6,20 +6,20 @@
       "description": "Some additional details about the blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2020-12-17T18:00:42-05:00"
+      "last_modified": "2020-12-17T18:10:07-05:00"
     },
     {
       "path": "index.html",
       "title": "theprncipalcomponent blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2020-12-17T18:00:43-05:00"
+      "last_modified": "2020-12-17T18:10:09-05:00"
     },
     {
       "path": "README.html",
       "author": [],
       "contents": "\ndistill_site\n\n\n",
-      "last_modified": "2020-12-17T18:00:45-05:00"
+      "last_modified": "2020-12-17T18:10:11-05:00"
     }
   ],
   "collections": ["posts/posts.json"]
