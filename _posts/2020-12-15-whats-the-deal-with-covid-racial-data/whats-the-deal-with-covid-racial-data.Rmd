@@ -1,7 +1,7 @@
 ---
 title: "What's the Deal with COVID Racial Data?"
 description: 
-preview: https://github.com/yangjasp/distill_site/images/COVIDRacialData/COVID Impact of Blacks.png
+preview: https://github.com/yangjasp/distill_site/images/COVIDRacialData/COVID_Impact_of_Blacks.png
 author:
 date: 12-15-2020
 output:
@@ -25,7 +25,7 @@ We know with certainty that blacks in particular are being disproportionately af
 
 <FIGURE>
 
-<IMG SRC= "/Users/jasper/Desktop/SummerWork2020/distill_site/images/COVIDRacialData/COVID Impact of Blacks.png">
+<IMG SRC= "https://github.com/yangjasp/distill_site/images/COVIDRacialData/COVID_Impact_of_Blacks.png">
 <FIGCAPTION> Based on COVID data released by state public health departments. 
 Population data retrieved from the US Census Bureau. </FIGCAPTION> 
 
@@ -36,7 +36,7 @@ This chart illustrates a striking pattern in the state-by-state data so far: bla
 
 <FIGURE>
 
-<IMG SRC= "/Users/jasper/Desktop/SummerWork2020/distill_site/images/COVIDRacialData/COVID in Cities.png">
+<IMG SRC= " https://github.com/yangjasp/distill_site/images/COVIDRacialData/COVID_in_Cities.png">
 <FIGCAPTION> Based on COVID data officially released by cities.
 Population data retrieved from the US Census Bureau. </FIGCAPTION> 
 
