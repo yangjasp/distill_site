@@ -1,7 +1,7 @@
 ---
 title: "What's the Deal with COVID Racial Data?"
 description: 
-preview: https://github.com/yangjasp/distill_site/blob/main/docs/images/COVIDRacialData/COVID_Impact_of_Blacks.png
+preview: https://yangjasp-personalsite.netlify.app/images/COVIDRacialData/COVID_Impact_of_Blacks.png
 author:
 date: 12-15-2020
 output:
