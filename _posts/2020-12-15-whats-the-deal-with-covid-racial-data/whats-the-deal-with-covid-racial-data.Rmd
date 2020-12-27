@@ -3,7 +3,7 @@ title: "What's the Deal with COVID Racial Data?"
 description: 
 preview: https://yangjasp-personalsite.netlify.app/docs/images/COVIDRacialData/COVID_Impact_of_Blacks.png
 author:
-date: 12-15-2020
+date: 4-22-2020
 output:
   distill::distill_article:
     self_contained: false
