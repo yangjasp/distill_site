@@ -5,20 +5,20 @@
       "title": "About Me",
       "author": [],
       "contents": "\n\nMy name is Jasper Yang and I am an undergraduate at Grinnell College majoring in biology with a concentration in statistics. Due to COVID, I am taking some time off from school to work as a research assistant in the Department of Biostatistics, Epidemiology, and Informatics at the University of Pennsylvannia’s Perelman School of Medicine. I hope to pursue a graduate degree in biostatistics after completing my undergraduate studies at Grinnell.\nThis website contains my personal blog, the prncipal component, where I occasionally throw my thoughts on interesting applications of statistics in science, sports, and more. Hopefully, it will have some links to published research that I have contributed to soon!\nYou can reach me on twitter @jyang29 or via email at yangjasp@grinnell.edu. Thanks for visiting!\n\n\n\n",
-      "last_modified": "2020-12-26T18:27:37-05:00"
+      "last_modified": "2020-12-26T19:19:29-05:00"
     },
     {
       "path": "index.html",
       "title": "theprncipalcomponent blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2020-12-17T18:38:59-05:00"
+      "last_modified": "2020-12-26T19:19:30-05:00"
     },
     {
       "path": "README.html",
       "author": [],
       "contents": "\ndistill_site\n\n\n",
-      "last_modified": "2020-12-26T18:27:38-05:00"
+      "last_modified": "2020-12-26T19:19:32-05:00"
     }
   ],
   "collections": ["posts/posts.json"]
