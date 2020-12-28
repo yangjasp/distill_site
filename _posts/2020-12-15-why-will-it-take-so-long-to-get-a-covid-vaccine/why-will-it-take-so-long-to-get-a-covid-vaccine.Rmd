@@ -1,7 +1,7 @@
 ---
 title: "Why Will it Take so Long to Get a COVID Vaccine?"
 description: 
-preview: https://pixabay.com/get/57e8dd474d57a414f6d1867dda3536781537dce155557748_1920.jpg
+preview: https://yangjasp-personalsite.netlify.app/docs/images/Vaccine/syringe.png
 author:
 date: 3-24-2020
 output:
