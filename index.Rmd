@@ -1,8 +1,9 @@
 ---
-title: "theprncipalcomponent blog"
+title: "blog"
 site: distill::distill_website
 listing: 
   posts:
+    - 2020-12-28-what-if-some-vaccines-are-more-effective-than-others
     - 2020-12-15-bayes-theorem-and-covid19
     - 2020-12-15-whats-the-deal-with-covid-racial-data
     - 2020-12-15-why-will-it-take-so-long-to-get-a-covid-vaccine

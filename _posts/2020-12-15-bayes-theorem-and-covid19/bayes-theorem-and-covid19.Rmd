@@ -2,7 +2,7 @@
 title: "COVID-19 Testing and Bayes' Theorem"
 description: 
 date: 12-15-2020
-preview: https://pixabay.com/get/52e9d54b4c5bac14f6d1867dda3536781537dce15554774e_1920.png
+preview: https://yangjasp-personalsite.netlify.app/docs/images/BayesTheoremandCOVIDTesting/BayesTheorem.png   
 output:
   distill::distill_article:
     self_contained: false

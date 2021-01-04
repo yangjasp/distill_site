@@ -12,7 +12,7 @@ plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)
 rasterImage(jj,0,0,1,1)
 ```
 
-This website contains my personal blog, the prncipal component, where I occasionally throw my thoughts on interesting applications of statistics in science, sports, and more. Hopefully, it will have some links to published research that I have contributed to soon! 
+This website contains my personal blog, where I occasionally throw my thoughts on interesting applications of statistics in science, sports, and more. Hopefully, it will have some links to published research that I have contributed to soon! 
 
 You can reach me on twitter @jyang29 or via email at yangjasp@grinnell.edu. Thanks for visiting!
 
