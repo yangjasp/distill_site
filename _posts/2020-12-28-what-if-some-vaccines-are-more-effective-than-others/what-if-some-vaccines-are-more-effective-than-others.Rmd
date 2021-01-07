@@ -31,9 +31,9 @@ The answers to these questions are certainly complex, and they will likely draw 
 
 ## What is Vaccine Efficacy?
 
-Before moving any further, let's make sure we understand what vaccine efficacy is. Essentially, it is a measure of how well a vaccine prevents cases of the disease in a group of vaccinated subjects compared to a control group of un-vaccinated (received placebo) subjects. An estimate of the efficacy is generated from clinical trial data, which every vaccine must collect and submit to the FDA for review before being made available to the public. It is important to remember that the 
+Before moving any further, let's make sure we understand what vaccine efficacy is. Essentially, it is a measure of how well a vaccine prevents cases of the disease in a group of vaccinated subjects compared to a control group of un-vaccinated (received placebo) subjects. An estimate of the efficacy is generated from clinical trial data, which every vaccine must collect and submit to the FDA for review before being made available to the public.
 
-The actual calculation of efficacy relies on a term called *risk*. In epidemiology, *risk* is the probability that an event (such as infection) will occur in a given time period, and it is measured in a clinical trial as the proportion of total subjects in a group who experienced the event in the time period that they were followed. For example, if 8 out of 1,000 patients who receive an actual vaccine in a clinical trial become infected with COVID-19, then the estimate of risk of infection in the vaccination group is simply 0.08, or 0.8%. The ratio of risk in the treatment (actual vaccine) group compared to the risk in the control (placebo) group is called the *risk ratio*. Risk ratios below 1 suggest that the treatment reduces the risk of disease compared to the control, and smaller ratios suggest a stronger reduction. Efficacy is calculated as 1 - Risk Ratio, so an efficacy closer to 1 (or 100%) means that the vaccine reduces the risk of infection by a greater proportion. You can read more about vaccine efficacy on the CDC website [here](https://www.cdc.gov/csels/dsepd/ss1978/lesson3/section6.html)
+The actual calculation of efficacy relies on a term called *risk*. In epidemiology, *risk* is the probability that an event (such as infection) will occur in a given time period, and it is measured in a clinical trial as the proportion of total subjects in a group who experienced the event in the time period that they were followed. For example, if 8 out of 1,000 patients who receive an actual vaccine in a clinical trial become infected with COVID-19, then the estimate of risk of infection in the vaccination group is simply 0.008, or 0.8%. The ratio of risk in the treatment (actual vaccine) group compared to the risk in the control (placebo) group is called the *risk ratio*. Risk ratios below 1 suggest that the treatment reduces the risk of disease compared to the control, and smaller ratios suggest a stronger reduction. Efficacy is calculated as 1 - Risk Ratio, so an efficacy closer to 1 (or 100%) means that the vaccine reduces the risk of infection by a greater proportion. You can read more about vaccine efficacy on the CDC website [here](https://www.cdc.gov/csels/dsepd/ss1978/lesson3/section6.html).
 
 Remember that ratios are multiplicative, not additive, so we can intepret 95% vaccine efficacy (the equivalent to 100%-95% = 5% risk ratio) as meaning that the risk for COVID in the vaccine group is 0.05 (5%) times the risk in the control group.  
 
@@ -56,7 +56,7 @@ DiagrammeR::grViz("digraph {
   rec4 [label = <<b>Deceased Individuals (D):</b>>]
   
   # edge definitions with the node IDs
-  rec1 -> rec2 rec2 -> rec3 rec2 -> rec4 rec4 -> rec1 
+  rec1 -> rec2 rec2 -> rec3 rec2 -> rec4 rec3 -> rec1 
 
   }", 
   height = 250, width = 700)
@@ -66,7 +66,7 @@ DiagrammeR::grViz("digraph {
 
 We are interested in how the flow of individuals occurs over time, so we will measure it as the rate at which people exit/enter a group per day. Below we explore each arrow on the diagram above:
 
-* **S &rightarrow; I:** The rate at which susceptible individuals become infected. This value intuitively depends on the rate of contact between susceptible and infected individuals as well as the probability that the disease would be transmitted given a contact occurs. Here we introduce our first parameter, $\beta$, which captures the *rate of transmission*. We can calculate $\beta$ using $R_0$, the more intuitive "basic reproductive rate" of a disease, and $\gamma$, the recovery rate (which is calculated as as 1/length of infectious period), because: 
+* **S &rightarrow; I:** The rate at which susceptible individuals become infected. This value intuitively depends on the rate of contact between susceptible and infected individuals as well as the probability that the disease would be transmitted given a contact occurs. Here we introduce our first parameter, $\beta$, which captures the *rate of transmission*. We can calculate $\beta$ using $R_0$, the more intuitive "basic reproductive rate" of a disease, $\gamma$, the recovery rate (which is calculated as as 1/length of infectious period), and $N$, the population size, because: 
 
 $$\begin{align*}
 \beta = \frac{R_0 \gamma}{N}
@@ -90,7 +90,7 @@ $$\begin{align*}
 \frac{dD}{dt} &= \gamma I(\mu)
 \end{align*}$$
 
-where the parameters $\beta$, $\gamma$, $\omega$, and $\mu$ are the transmission rate, recovery rate, loss of immunity rate, and death rate respectively. If we set values for each of these parameters based on our knowledge of the COVID-19 pandemic and set initial sizes for each group, we can track the course of the disease by solving this system of ordinary differential equations for each day to model how the disease might progress.
+where the parameters $\beta$, $\gamma$, $\omega$, and $\mu$ are the transmission rate, recovery rate, loss of immunity rate, and death rate, respectively. If we set values for each of these parameters based on our knowledge of the COVID-19 pandemic and set initial sizes for each group, we can track the course of the disease by solving this system of ordinary differential equations for each day to model how the disease might progress.
 
 ## Adding Long-Term Immunity: Vaccines
 
@@ -147,11 +147,9 @@ Assuming that the number of vaccines given per day, $\nu_1$ and $\nu_2$, and the
 
 $$\begin{align*}
 \frac{dS}{dt} &= -\beta S I + \omega R -  \nu_1  -  \nu_2 \\
-\frac{dV_{1S}}{dt} &= \nu_1 (\varphi_1)\\
-\frac{dV_{1F}}{dt} &= \nu_1 (1-\varphi_1)\\
-\frac{dV_{2S}}{dt} &= \nu_2 (\varphi_2)\\
-\frac{dV_{2F}}{dt} &= \nu_2 (1-\varphi_2)\\
-\frac{dI}{dt} &= \beta S I - \gamma I + \beta V_{1F} I + \beta V_{2F} I \\ &= \beta I(S + V_{1F} + V_{2F}) - \gamma I\\
+\frac{dV_{1}}{dt} &= \nu_1 - (1-\varphi_1) \beta V_1 I\\
+\frac{dV_{2}}{dt} &= \nu_2 - (1-\varphi_2) \beta V_2 I \\
+\frac{dI}{dt} &= \beta S I - \gamma I + (1-\varphi_1)\beta V_{1} I + (1-\varphi_2)\beta V_{2} I \\ &= \beta I[S + (1-\varphi_1)V_{1} + (1-\varphi_2)V_{2}] - \gamma I\\
 \frac{dR}{dt} &= \gamma I(1-\mu) - \omega R\\
 \frac{dD}{dt} &= \gamma I(\mu)
 \end{align*}$$
@@ -207,11 +205,9 @@ For our system of ordinary differential equations we now have:
 
 $$\begin{align*}
 \frac{dS_i}{dt} &= -\beta S_i C (I_i/N) + \omega R_i - \nu_{1i}  -  \nu_{2i} \\
-\frac{dV_{1si}}{dt} &=  \nu_{1i} (\varphi_1)\\
-\frac{dV_{1fi}}{dt} &=  \nu_{1i} (1-\varphi_1) - \beta V_{f1i} C (I_i/N)\\
-\frac{dV_{2si}}{dt} &=  \nu_{2i} (\varphi_2)\\
-\frac{dV_{2fi}}{dt} &=  \nu_{2i} (1-\varphi_2)  - \beta V_{f2i} C (I_i/N)\\
-\frac{dI_i}{dt} &= \beta S_i I_i - \gamma I_i + \beta V_{1Fi} C (I_i/N) + \beta V_{2Fi} C (I_i/N) \\
+\frac{dV_{1i}}{dt} &=  \nu_{1i} - (1-\varphi_1) \beta V_{1i} C (I_i/N)\\
+\frac{dV_{2i}}{dt} &=  \nu_{2i} - (1-\varphi_2) \beta V_{2i} C (I_i/N)\\
+\frac{dI_i}{dt} &= \beta S_i I_i - \gamma I_i + (1-\varphi_1)\beta V_{1i} C (I_i/N) + (1-\varphi_2)\beta V_{2i} C (I_i/N) \\
 \frac{dR_i}{dt} &= \gamma I_i(1-\mu_i) - \omega R_i\\
 \frac{dD_i}{dt} &= \gamma I_i(\mu_i)
 \end{align*}$$
@@ -220,7 +216,7 @@ Note that this model assumes that the parameters $\beta$, $\gamma$, $\omega$, $\
 
 ## Completing the Final Model
 
-Introducing a contact matrix allows our model to more accurately capture the rate of transmission across age classes, but it does not account for the fact that asymptomatic carriers are much more likely to come into contact with susceptible individuals that symptomatic ones. With this fact in mind, we introduce one more parameter, $\alpha_i$, to represent the fraction of asymptomatic infections per age class. This addition should be an important one, as it will help our model better capture the [reported](https://jamanetwork.com/journals/jama/fullarticle/2773055) role of young adults as viral spreaders. Similarly to the approach described in a 2012 [paper](http://www.sherrytowers.com/towers_feng_2012.pdf) by Tower and Feng, we can now split our infected (I<sub>s</sub>) classes into symptomatic (I<sup>s</sup>) and asymptomatic (I<sup>a</sup>) class. We will also create a new contact matrix, C<sup>s</sup>, which for our purposes will be a our old contact matrix, now called C<sup>a</sup>, multiplied by some constant $k$ < 1 which represents the fraction of contacts that a symptomatic individual makes compared to an asymptomatic individual on average. This gives us a revised final system of ordinary differential equations:
+Introducing a contact matrix allows our model to more accurately capture the rate of transmission across age classes, but it does not account for the fact that asymptomatic carriers are much more likely to come into contact with susceptible individuals than symptomatic ones. With this fact in mind, we introduce one more parameter, $\alpha_i$, to represent the fraction of asymptomatic infections per age class. This addition should be an important one, as it will help our model better capture the [reported](https://jamanetwork.com/journals/jama/fullarticle/2773055) role of young adults as viral spreaders. Similarly to the approach described in a 2012 [paper](http://www.sherrytowers.com/towers_feng_2012.pdf) by Tower and Feng, we can now split our infected (I<sub>s</sub>) classes into symptomatic (I<sup>s</sup>) and asymptomatic (I<sup>a</sup>) class. We will also create a new contact matrix, C<sup>s</sup>, which for our purposes will be a our old contact matrix, now called C<sup>a</sup>, multiplied by some constant $k$ < 1 which represents the fraction of contacts that a symptomatic individual makes compared to an asymptomatic individual on average. This gives us a revised final system of ordinary differential equations:
 
 $$\begin{align*}
 \frac{dS_i}{dt} &= -\beta S_i [C^{a} (I^{a}_i/N_i) + C^{s} (I^{s}_i/N_i)] + \omega R_i - \nu_{1i}  -  \nu_{2i} \\
@@ -260,7 +256,7 @@ Note: for the models that follow, I will be using the following parameters:
 
 Let's start by supposing that only one vaccine efficacy, 95%, is available. Remembering our discussion about vaccine efficacy, this means that compared to people who are not vaccinated, those who have been vaccinated have 0.05 times the risk of getting COVID. Assuming vaccinated individuals are making the same social contacts as they would if they were not vaccinated, this means that we have $\sum_{i=1}^{18} \nu_{1i} = 1,000,000$ ($\nu_{2i} = 0$ for all $i$), and $\varphi_{1i} = 0.95$. That is, people who receive a vaccine receive vaccine 1 and are $1-\varphi_{1i}=0.05$ times as likely to get COVID as those in the S group.
 
-Below is a series of  graphs comparing the the overall trajectory of deaths due to COVID-19 in the U.S. with no vaccine, Vaccine 1 (95% Efficacy) alone, and Vaccine 2 (70% Efficacy) alone. In these scenarios, both vaccines are administered starting with the oldest individuals and gradually moving down age classes.
+Below is a series of  graphs comparing the the overall trajectory of deaths due to COVID-19 in the U.S. with no vaccine, Vaccine 2 (70% Efficacy) alone, and Vaccine 1 (95% Efficacy) alone. In these scenarios, both vaccines are administered starting with the oldest individuals and gradually moving down age classes.
 
 ```{r, echo = F,fig.height= 12,eval=T}
 # Real Model with Matrices ----------------------------------------
@@ -505,8 +501,8 @@ p4 <- ggplot(death_by_age_df, aes(x = time, y = N_total,color = Age_updated,fill
   theme(plot.margin =unit(c(25,5.5,5.5,5.5), "pt"))
 
 
-  output <- list(p1,p2,p2A,p3,p4,total_output,solutions2)
-  names(output) <- c("plot","plotzoom","plotsuperzoom","deathplot","deathbyageplot","df","raw")
+  output <- list(p1,p2,p2A,p3,p4,total_output,solutions2,death_by_age_df)
+  names(output) <- c("plot","plotzoom","plotsuperzoom","deathplot","deathbyageplot","df","raw","death_df_by_age")
   output
 }
 
@@ -532,14 +528,42 @@ V1_list_final2 <- list(V1,V1,V1,V1,V1,V1,V1,V1,V1,V1,V1,V1,V1,V1,V1,V1,V1,V18)
 V2_list_final <- list(V2, V2, V2, V2, V2, V2, V2, V2, V2, V2, V2, V2, V2, V2, V2, V2, V2, V2)
 
 test1 <- plot_model2(distancing_const = 0.20, 1.05,.95,.70,V1_list_final2,V2_list_final)
-plot1 <- test1$deathbyageplot
+plot1 <- ggplot(test1$death_df_by_age, aes(x = time, y = N_total,color = Age_updated,fill = Age_updated)) +
+  geom_area(alpha = 0.5, position = "stack",stat = "identity") +
+  theme(plot.margin = unit(c(10,5.5,5.5,5.5),"cm"))+
+  geom_line(position = "stack",size = 1) +
+  scale_color_jama(name = "Age") +
+  scale_fill_jama(name = "Age") + ylab("Cumulative Deaths (Millions)") + xlab("Time")  +
+  scale_y_continuous(labels = sprintf("%.1f", seq(from = 0, to = 5.5, by = 0.5)), breaks = seq(from = 0, to = 5500000,by = 500000),limits = c(0,5500000)) +
+  scale_x_continuous(labels = c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"),breaks = c(0,31,31+28,31+28+31,31+28+31+30,31+28+31+30+31,31+28+31+30+31+30,31+28+31+30+31+30+31,31+28+31+30+31+30+31+31,31+28+31+30+31+30+31+31+30,31+28+31+30+31+30+31+31+30+31,31+28+31+30+31+30+31+31+30+31+30))+
+  theme_clean() +
+  theme(plot.margin =unit(c(25,5.5,5.5,5.5), "pt"))
+
 
 test2 <- plot_model2(distancing_const = 0.20, 1.05,.70,.95,V1_list_final2,V2_list_final)
-plot2 <- test2$deathbyageplot
+plot2 <- ggplot(test2$death_df_by_age, aes(x = time, y = N_total,color = Age_updated,fill = Age_updated)) +
+  geom_area(alpha = 0.5, position = "stack",stat = "identity") +
+  theme(plot.margin = unit(c(10,5.5,5.5,5.5),"cm"))+
+  geom_line(position = "stack",size = 1) +
+  scale_color_jama(name = "Age") +
+  scale_fill_jama(name = "Age") + ylab("Cumulative Deaths (Millions)") + xlab("Time") +
+  scale_y_continuous(labels = sprintf("%.1f", seq(from = 0, to = 5.5, by = 0.5)), breaks = seq(from = 0, to = 5500000,by = 500000),limits = c(0,5500000)) +
+  scale_x_continuous(labels = c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"),breaks = c(0,31,31+28,31+28+31,31+28+31+30,31+28+31+30+31,31+28+31+30+31+30,31+28+31+30+31+30+31,31+28+31+30+31+30+31+31,31+28+31+30+31+30+31+31+30,31+28+31+30+31+30+31+31+30+31,31+28+31+30+31+30+31+31+30+31+30))+
+  theme_clean() +
+  theme(plot.margin =unit(c(25,5.5,5.5,5.5), "pt"))
 
 
 test3 <- plot_model2(distancing_const = 0.20, 1.05, 0,.95,V1_list_final2,V2_list_final)
-plot3 <- test3$deathbyageplot
+plot3 <- ggplot(test3$death_df_by_age, aes(x = time, y = N_total,color = Age_updated,fill = Age_updated)) +
+  geom_area(alpha = 0.5, position = "stack",stat = "identity") +
+  theme(plot.margin = unit(c(10,5.5,5.5,5.5),"cm"))+
+  geom_line(position = "stack",size = 1) +
+  scale_color_jama(name = "Age") +
+  scale_fill_jama(name = "Age") + ylab("Cumulative Deaths (Millions)") + xlab("Time") +
+  scale_y_continuous(labels = sprintf("%.1f", seq(from = 0, to = 5.5, by = 0.5)), breaks = seq(from = 0, to = 5500000,by = 500000),limits = c(0,5500000)) +
+  scale_x_continuous(labels = c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"),breaks = c(0,31,31+28,31+28+31,31+28+31+30,31+28+31+30+31,31+28+31+30+31+30,31+28+31+30+31+30+31,31+28+31+30+31+30+31+31,31+28+31+30+31+30+31+31+30,31+28+31+30+31+30+31+31+30+31,31+28+31+30+31+30+31+31+30+31+30))+
+  theme_clean() +
+  theme(plot.margin =unit(c(25,5.5,5.5,5.5), "pt"))
 
 figure1 <- cowplot::plot_grid(plot3,plot2,plot1,ncol = 1, align = "h", labels = c("A. No Vaccine","B. Vaccine 70% Efficacy","C. Vaccine 95% Efficacy"),hjust = 0, label_x = 0.01)
 figure1
@@ -611,7 +635,16 @@ Scen2_V1_list <- list(V1_scen2,V1_scen2,V1_scen2,V1_scen2,V1_scen2,V1_scen2,V1_s
 Scen2_V2_list <- list(V2_scen2,V2_scen2,V2_scen2,V2_scen2,V2_scen2,V2_scen2,V2_scen2,V2_scen2,V2_scen2,V2_scen2,V2_scen2,V2_scen2,V2_scen2,V2_scen2,V2_scen2,V2_scen2,V2_scen2,V182_scen2)
 
 test5 <- plot_model2(distancing_const = 0.20, 1.05,.95,.70,Scen2_V1_list,Scen2_V2_list)
-plot5 <- test5$deathbyageplot
+plot5 <- ggplot(test5$death_df_by_age, aes(x = time, y = N_total,color = Age_updated,fill = Age_updated)) +
+  geom_area(alpha = 0.5, position = "stack",stat = "identity") +
+  theme(plot.margin = unit(c(10,5.5,5.5,5.5),"cm"))+
+  geom_line(position = "stack",size = 1) +
+  scale_color_jama(name = "Age") +
+  scale_fill_jama(name = "Age") + ylab("Cumulative Deaths (Thousands)") + xlab("Time") +
+  scale_y_continuous(labels = sprintf("%.0f", seq(from = 0, to = 1100, by = 100)), breaks = seq(from = 0, to = 1100000,by = 100000),limits = c(0,1150000)) +
+  scale_x_continuous(labels = c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"),breaks = c(0,31,31+28,31+28+31,31+28+31+30,31+28+31+30+31,31+28+31+30+31+30,31+28+31+30+31+30+31,31+28+31+30+31+30+31+31,31+28+31+30+31+30+31+31+30,31+28+31+30+31+30+31+31+30+31,31+28+31+30+31+30+31+31+30+31+30))+
+  theme_clean() +
+  theme(plot.margin =unit(c(25,5.5,5.5,5.5), "pt"))
 
 #Approach 1
  #Re-Write Function with new measure of how many left 65+
@@ -865,8 +898,8 @@ p4 <- ggplot(death_by_age_df, aes(x = time, y = N_total,color = Age_updated,fill
   theme(plot.margin =unit(c(25,5.5,5.5,5.5), "pt"))
 
 
-  output <- list(p1,p2,p2A,p3,p4,total_output,solutions2)
-  names(output) <- c("plot","plotzoom","plotsuperzoom","deathplot","deathbyageplot","df","raw")
+  output <- list(p1,p2,p2A,p3,p4,total_output,solutions2,death_by_age_df)
+  names(output) <- c("plot","plotzoom","plotsuperzoom","deathplot","deathbyageplot","df","raw","death_df_by_age")
   output
 }
 
@@ -933,7 +966,16 @@ Scen1_V1_list <- list(V1_scen1,V1_scen1,V1_scen1,V1_scen1,V1_scen1,V1_scen1,V1_s
 Scen1_V2_list <- list(V2_scen1_under65,V2_scen1_under65,V2_scen1_under65,V2_scen1_under65,V2_scen1_under65,V2_scen1_under65,V2_scen1_under65,V2_scen1_under65,V2_scen1_under65,V2_scen1_under65,V2_scen1_under65,V2_scen1_under65,V132_scen1,V2_scen1_above65,V2_scen1_above65,V2_scen1_above65,V2_scen1_above65,V2_scen1_above65)
 
 test4 <- plot_model3(distancing_const = 0.20, 1.05,.95,.70,Scen1_V1_list,Scen1_V2_list)
-plot4 <- test4$deathbyageplot
+plot4 <- ggplot(test4$death_df_by_age, aes(x = time, y = N_total,color = Age_updated,fill = Age_updated)) +
+  geom_area(alpha = 0.5, position = "stack",stat = "identity") +
+  theme(plot.margin = unit(c(10,5.5,5.5,5.5),"cm"))+
+  geom_line(position = "stack",size = 1) +
+  scale_color_jama(name = "Age") +
+  scale_fill_jama(name = "Age") + ylab("Cumulative Deaths (Thousands)") + xlab("Time") +
+  scale_y_continuous(labels = sprintf("%.0f", seq(from = 0, to = 1100, by = 100)), breaks = seq(from = 0, to = 1100000,by = 100000),limits = c(0,1150000)) +
+  scale_x_continuous(labels = c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"),breaks = c(0,31,31+28,31+28+31,31+28+31+30,31+28+31+30+31,31+28+31+30+31+30,31+28+31+30+31+30+31,31+28+31+30+31+30+31+31,31+28+31+30+31+30+31+31+30,31+28+31+30+31+30+31+31+30+31,31+28+31+30+31+30+31+31+30+31+30))+
+  theme_clean() +
+  theme(plot.margin =unit(c(25,5.5,5.5,5.5), "pt"))
 
 figure2 <- cowplot::plot_grid(plot4,plot5,ncol = 1, align = "h", labels = c("A. Deaths Under Approach A","B. Deaths Under Approach B"),hjust = 0, label_x = 0.01)
 figure2
@@ -946,10 +988,28 @@ But is it really this simple? Remember that the figure above is based on a Vacci
 
 ```{r,fig.height = 8,eval=T}
 test6 <- plot_model3(distancing_const = 0.20, 1.05,.95,.90,Scen1_V1_list,Scen1_V2_list)
-plot6 <- test6$deathbyageplot
+plot6 <- ggplot(test6$death_df_by_age, aes(x = time, y = N_total,color = Age_updated,fill = Age_updated)) +
+  geom_area(alpha = 0.5, position = "stack",stat = "identity") +
+  theme(plot.margin = unit(c(10,5.5,5.5,5.5),"cm"))+
+  geom_line(position = "stack",size = 1) +
+  scale_color_jama(name = "Age") +
+  scale_fill_jama(name = "Age") + ylab("Cumulative Deaths (Thousands)") + xlab("Time") +
+  scale_y_continuous(labels = sprintf("%.0f", seq(from = 0, to = 750, by = 50)), breaks = seq(from = 0, to = 750000,by = 50000),limits = c(0,750000)) +
+  scale_x_continuous(labels = c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"),breaks = c(0,31,31+28,31+28+31,31+28+31+30,31+28+31+30+31,31+28+31+30+31+30,31+28+31+30+31+30+31,31+28+31+30+31+30+31+31,31+28+31+30+31+30+31+31+30,31+28+31+30+31+30+31+31+30+31,31+28+31+30+31+30+31+31+30+31+30))+ 
+  theme_clean() +
+  theme(plot.margin =unit(c(25,5.5,5.5,5.5), "pt"))
 
 test7 <- plot_model2(distancing_const = 0.20, 1.05,.95,.90,Scen2_V1_list,Scen2_V2_list)
-plot7 <- test7$deathbyageplot
+plot7 <- ggplot(test7$death_df_by_age, aes(x = time, y = N_total,color = Age_updated,fill = Age_updated)) +
+  geom_area(alpha = 0.5, position = "stack",stat = "identity") +
+  theme(plot.margin = unit(c(10,5.5,5.5,5.5),"cm"))+
+  geom_line(position = "stack",size = 1) +
+  scale_color_jama(name = "Age") +
+  scale_fill_jama(name = "Age") + ylab("Cumulative Deaths (Thousands)") + xlab("Time") +
+  scale_y_continuous(labels = sprintf("%.0f", seq(from = 0, to = 750, by = 50)), breaks = seq(from = 0, to = 750000,by = 50000),limits = c(0,750000)) +
+  scale_x_continuous(labels = c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"),breaks = c(0,31,31+28,31+28+31,31+28+31+30,31+28+31+30+31,31+28+31+30+31+30,31+28+31+30+31+30+31,31+28+31+30+31+30+31+31,31+28+31+30+31+30+31+31+30,31+28+31+30+31+30+31+31+30+31,31+28+31+30+31+30+31+31+30+31+30))+ 
+  theme_clean() +
+  theme(plot.margin =unit(c(25,5.5,5.5,5.5), "pt"))
 
 figure3 <- cowplot::plot_grid(plot6,plot7,ncol = 1, align = "h", labels = c("A. Deaths Under Approach A","B. Deaths Under Approach B"),hjust = 0, label_x = 0.01)
 figure3
