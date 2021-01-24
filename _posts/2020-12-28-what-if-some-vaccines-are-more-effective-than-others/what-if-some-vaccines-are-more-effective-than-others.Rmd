@@ -1,6 +1,7 @@
 ---
 title: "Modeling COVID-19 and Vaccine Rollout Strategies"
 description: 
+preview: NULL
 date: 12-28-2020
 header-includes:
   - \usepackage{amsmath}
@@ -591,7 +592,7 @@ Clearly we want to vaccinate the oldest and most vulnerable individuals first, b
 
 * *Approach B:* The oldest individuals will be vaccinated as soon as possible with either vaccine. Every day, the oldest 500,000 people will receive Vaccine 1 and the next oldest 500,000 will receive Vaccine 2.
 
-```{r,echo = F, fig.height=8,preview = T,eval=T}
+```{r,echo = F, fig.height=8,preview = F,eval=T}
 V1_scen2 <- function(t,Smin,S){
   if(Smin >= 500000 | S == 0){
     0
@@ -1058,6 +1059,7 @@ autofit(table1)
 
 * The models also assumes that:
   + The death and infection rates published in the CDC [ACIP Report](https://www.cdc.gov/vaccines/acip/meetings/downloads/slides-2020-12/slides-12-20/02-COVID-Dooling.pdf) on 12/20/20 are accurate and uniform within their defined age groups.
+  + The vaccine is effective at preventing illness and transmission.
   + The contacts made by individuals are reduced by a constant multiplier as a result of social distancing guidelines. The nature and proportional allocation among age classes does not change. This is probably not true, but I am not aware of studies that have quantified the adjusted contact rates. 
   + None of the parameters change over time. This is not true, as I assume/hope more extreme measures would be taken to slow the growth if it exploded.
   + Stochastic effects do not affect the course of the pandemic.
