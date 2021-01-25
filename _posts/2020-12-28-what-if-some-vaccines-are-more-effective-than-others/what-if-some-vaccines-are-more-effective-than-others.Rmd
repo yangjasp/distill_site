@@ -259,7 +259,7 @@ Let's start by supposing that only one vaccine efficacy, 95%, is available. Reme
 
 Below is a series of  graphs comparing the the overall trajectory of deaths due to COVID-19 in the U.S. with no vaccine, Vaccine 2 (70% Efficacy) alone, and Vaccine 1 (95% Efficacy) alone. In these scenarios, both vaccines are administered starting with the oldest individuals and gradually moving down age classes.
 
-```{r, echo = F,fig.height= 12,eval=T}
+```{r, echo = F,fig.height= 12,eval=T, preview = F}
 # Real Model with Matrices ----------------------------------------
 plot_model2 <- function(distancing_const, r_0, Efficacy_V1,Efficacy_V2,Vax1_func,Vax2_func){
 
@@ -987,7 +987,7 @@ Based on our model, approach A will save approximately 200,000 more lives overal
 
 But is it really this simple? Remember that the figure above is based on a Vaccine 1 with 95% efficacy and a Vaccine 2 with 70% efficacy. But what if the difference in efficacies is smaller? The figure below compares the two approaches when Vaccine 2 has an 90% efficacy.
 
-```{r,fig.height = 8,eval=T}
+```{r,fig.height = 8,eval=T,preview = F}
 test6 <- plot_model3(distancing_const = 0.20, 1.05,.95,.90,Scen1_V1_list,Scen1_V2_list)
 plot6 <- ggplot(test6$death_df_by_age, aes(x = time, y = N_total,color = Age_updated,fill = Age_updated)) +
   geom_area(alpha = 0.5, position = "stack",stat = "identity") +
@@ -1036,7 +1036,7 @@ Also, let me know if there are any other scenarios I should explore. I am hoping
 * The rate of death once infected with COVID in each of the following age groups is (taken as (deaths per 100,000)/(incidence per 100,000) from [CDC](https://www.cdc.gov/vaccines/acip/meetings/downloads/slides-2020-12/slides-12-20/02-COVID-Dooling.pdf) estimates. Assumes number of patients re-infected is minimal.):
 * The initial conditions for the model were estimated from [Statistica](https://www.statista.com/statistics/241488/population-of-the-us-by-sex-and-age/) population data and [New York Times COVID-19 data](https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html) as of January 3, 2021. They were:
 
-```{r,echo = F}
+```{r,echo = F, preview = F}
 pop_dat <- data.frame(i = seq(1:18),Age = c("0-4","5-9","10-14","15-19","20-25","26-30","31-35","36-40","41-45","46-50","51-55","56-60","61-65","66-70","71-75","76-80","81-85","85+"),population = c(19.58,10.32+9.87,10.62+10.18,10.75+10.31,11.06+10.57,12+11.5,11.35+11.08,10.88+10.85,9.91+10.01,10.09+10.31,10.09+10.39,10.64+11.23,9.86+10.71,8.2+9.26,6.5+7.53,4.32+5.33,2.68+3.64,2.38+4.23))
 pop_dat$RateDeath <- sprintf("%.5f",c(rates_df2[9,"death"], rates_df2[8,"death"], rates_df2[8,"death"], (3*rates_df2[8,"death"]+2*rates_df2[7,"death"])/5, rates_df2[7,"death"], rates_df2[7,"death"], rates_df2[6,"death"],  rates_df2[6,"death"], rates_df2[5,"death"], rates_df2[5,"death"], rates_df2[4,"death"], rates_df2[4,"death"], rates_df2[4,"death"], rates_df2[3,"death"], rates_df2[3,"death"], rates_df2[2,"death"], rates_df2[2,"death"], rates_df2[1,"death"]))
 
