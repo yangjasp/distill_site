@@ -259,7 +259,7 @@ Let's start by supposing that only one vaccine efficacy, 95%, is available. Reme
 
 Below is a series of  graphs comparing the the overall trajectory of deaths due to COVID-19 in the U.S. with no vaccine, Vaccine 2 (70% Efficacy) alone, and Vaccine 1 (95% Efficacy) alone. In these scenarios, both vaccines are administered starting with the oldest individuals and gradually moving down age classes.
 
-```{r, echo = F,fig.height= 12,eval=T, preview = F}
+```{r, echo = F,fig.height= 12,eval=T, preview = FALSE}
 # Real Model with Matrices ----------------------------------------
 plot_model2 <- function(distancing_const, r_0, Efficacy_V1,Efficacy_V2,Vax1_func,Vax2_func){
 
