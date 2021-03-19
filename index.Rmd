@@ -1,11 +1,30 @@
+
+
 ---
-title: "Blog"
-site: distill::distill_website
-listing: 
-  posts:
-    - 2021-01-24-statistical-dignificance-by-betting-reframing-the-p-value
-    - 2020-12-28-what-if-some-vaccines-are-more-effective-than-others
-    - 2020-12-15-bayes-theorem-and-covid19
-    - 2020-12-15-whats-the-deal-with-covid-racial-data
-    - 2020-12-15-why-will-it-take-so-long-to-get-a-covid-vaccine
+title: "About Me"
 ---
+
+::: {.floatting}
+
+```{r out.width='25%', out.extra='style="float:left; padding:10px"'}
+knitr::include_graphics("https://yangjasp-personalsite.netlify.app/docs/images/jasperphoto.jpg")
+```
+
+
+My name is Jasper Yang and I am an undergraduate at Grinnell College majoring in biology with a concentration in statistics. I am taking the 2020-2021 school off to work as a research assistant in the Department of Biostatistics, Epidemiology, and Informatics at the University of Pennsylvania's Perelman School of Medicine. I hope to pursue a graduate degree in biostatistics after completing my undergraduate studies at Grinnell. 
+
+:::
+
+```{r, include = F, echo = F,out.width= "25%", out.extra='style="float:right; padding:3px"'}
+library(jpeg)
+jj <- jpeg::readJPEG("/Users/jasper/Desktop/SummerWork2020/distill_site/docs/images/jasperphoto.jpg",native=TRUE)
+plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)
+rasterImage(jj,0,0,1,1)
+```
+
+This website contains my personal blog, where I occasionally post about interesting applications of statistics in science, sports, and more. Hopefully, it will have some links to published research that I have contributed to soon! 
+
+You can reach me on twitter @jyang29 or via email at yangjasp@grinnell.edu. Thanks for visiting!
+
+
+
