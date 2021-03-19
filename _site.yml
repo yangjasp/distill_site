@@ -7,7 +7,7 @@ base_url: https://yangjasp-personalsite.netlify.app/
 collections:
   posts:
     disqus: theprncipalcomponentblog
-    share: [twitter, linkedin]
+    share: [twitter, linkedin, github]
 navbar:
   right:
     - text: "Blog"
