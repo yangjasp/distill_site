@@ -6,7 +6,7 @@ title: "About Me"
 
 ::: {.floatting}
 
-```{r out.width='26%', out.extra='style="float:left; padding:0px; border:3px solid"', include=F}
+```{r out.width='24%', out.extra='style="float:left; padding:0px; border:3px solid"', include=F}
 knitr::include_graphics("https://yangjasp-personalsite.netlify.app/docs/images/jasperphoto.jpg")
 ```
 
