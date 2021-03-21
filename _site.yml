@@ -16,7 +16,7 @@ navbar:
       href: index.html
     - icon: fa-twitter fa-lg
       href: https://twitter.com/jyang29?lang=en
-    - text: "CV"
+    - icon: ai-cv ai-lg
     - href: ./files/JasperYangCV.pdf
     - icon: fa-linkedin fa-lg
       href: https://www.linkedin.com/in/jasper-yang-21665218a
