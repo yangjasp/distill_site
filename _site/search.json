@@ -2,23 +2,23 @@
   "articles": [
     {
       "path": "about.html",
-      "title": "About Me",
+      "title": "About",
       "author": [],
-      "contents": "\n\n My name is Jasper Yang and I am an undergraduate at Grinnell College majoring in biology with a concentration in statistics. I am currently taking a year off from school to work as a research assistant in the Department of Biostatistics, Epidemiology, and Informatics at the University of Pennsylvania’s Perelman School of Medicine. I hope to pursue a graduate degree in biostatistics after completing my undergraduate studies at Grinnell.\n\nMy primary research interests are in survey sampling, electronic health records (EHR), and environmental health. I am also interested in applications of statistics in ecology, particularly as it relates to health, including the ecology of infectious disease and conservation ecology. I am currently working on projects analyzing the determinants of COVID-19 hospital outcomes and developing software for efficient multi-wave sampling under two-phase designs. Outside of statistics, I enjoy playing any sport from soccer to baseball, travelling, and biking. I am a diehard Boston sports fan, and I like to say that my love for statistics grew out of studying Major League Baseball statistics as a kid.\nThis website contains my personal blog, where I occasionally post about interesting applications of statistics in science, sports, and more. Hopefully, it will have some links to published research that I have contributed to soon!\nYou can reach me on twitter @jyang29 or via email at yangjasp@grinnell.edu. Thanks for visiting!\n\n\n\n",
-      "last_modified": "2021-03-21T22:08:47-05:00"
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-03-22T09:53:53-05:00"
     },
     {
       "path": "index.html",
       "title": "Blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-03-21T22:09:31-05:00"
+      "last_modified": "2021-03-22T09:59:47-05:00"
     },
     {
       "path": "README.html",
       "author": [],
       "contents": "\ndistill_site\n\n\n",
-      "last_modified": "2021-03-21T22:09:32-05:00"
+      "last_modified": "2021-03-22T09:59:49-05:00"
     }
   ],
   "collections": ["posts/posts.json"]

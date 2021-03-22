@@ -10,9 +10,9 @@ collections:
     share: [twitter, linkedin, github]
 navbar:
   right:
-    - text: "About"
-      href: about.html
     - text: "Blog"
+      href: about.html
+    - text: "About"
       href: index.html
     - icon: fa-twitter fa-lg
       href: https://twitter.com/jyang29?lang=en
