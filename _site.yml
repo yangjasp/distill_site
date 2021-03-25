@@ -8,6 +8,7 @@ collections:
   posts:
     disqus: theprncipalcomponentblog
     share: [twitter, linkedin, github]
+    subscribe: _subscribe.html
 navbar:
   right:
     - text: "Blog"
