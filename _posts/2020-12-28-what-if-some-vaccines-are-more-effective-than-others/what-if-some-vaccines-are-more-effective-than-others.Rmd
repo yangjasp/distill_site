@@ -592,7 +592,7 @@ Clearly we want to vaccinate the oldest and most vulnerable individuals first, b
 
 * *Approach B:* The oldest individuals will be vaccinated as soon as possible with either vaccine. Every day, the oldest 500,000 people will receive Vaccine 1 and the next oldest 500,000 will receive Vaccine 2.
 
-```{r,echo = F, fig.height=8,preview = F,eval=T}
+```{r,echo = F, fig.height=8,preview = FALSE,eval=T}
 V1_scen2 <- function(t,Smin,S){
   if(Smin >= 500000 | S == 0){
     0
