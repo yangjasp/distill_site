@@ -22,9 +22,11 @@ plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)
 rasterImage(jj,0,0,1,1)
 ```
 
-My primary research interests are in electronic health records (EHR), Bayesian inference, comparitive effectiveness, and health policy. I am also interested in rationality, decision theory, and the philosophy of science, which are all intertwined with principles of statistics. My recent research projects included an analysis of the determinants of COVID-19 hospital outcomes in the University of Pennsylvania Health System and the development of software for efficient multi-wave sampling under two-phase designs. Outside of the classroom, I enjoy playing any sport from soccer to baseball, travelling, and biking. I am a diehard Boston sports fan, and I like to say that my love for statistics grew out of studying Major League Baseball statistics as a kid.
+My primary research interests are in electronic health records (EHR), Bayesian inference, comparative effectiveness, and precision medicine. I am also interested in rationality, decision theory, and the philosophy of science, which are all intertwined with principles of statistics. These interests are diverse, but they are all grounded in one central question: how can we use data to improve patient health outcomes in the modern age of medicine?
 
-This website contains my personal blog, where I occasionally post about interesting applications of statistics in science, philosophy, sports, and more. Hopefully, it will have some links to published research that I have contributed to soon! 
+Recently, I have conducted research projects analyzing the determinants of COVID-19 hospital outcomes in the University of Pennsylvania Health System and developing software for efficient multi-wave sampling under two-phase designs. I have also been involved in the statistical analysis for multiple clinical trials. Outside of the classroom, I enjoy playing any sport from soccer to baseball, travelling, and biking. I am a diehard Boston sports fan, and I like to say that my love for statistics grew out of studying Major League Baseball statistics as a kid.
+
+This website contains my personal blog, where I occasionally post about interesting applications of statistics in science, philosophy, sports, and more. It also contains links to some of my published and hopefully-soon-to-be-published work! 
 
 You can reach me on twitter @jyang29 or via email at yangjasp@grinnell.edu. Thanks for visiting!
 

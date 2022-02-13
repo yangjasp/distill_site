@@ -1,0 +1,20 @@
+---
+pagetitle: "Research"
+---
+
+## 'optimall' R package
+* CRAN Link: [https://www.medrxiv.org/content/10.1101/2021.09.08.21263311v1](https://www.medrxiv.org/content/10.1101/2021.09.08.21263311v1)
+* Primary package vignette: [https://cran.r-project.org/web/packages/optimall/vignettes/optimall-vignette.html](https://cran.r-project.org/web/packages/optimall/vignettes/optimall-vignette.html)
+* ArXiv paper pre-print: [Optimum Allocation for Adaptive Multi-Wave Sampling in R: The R Package optimall](https://arxiv.org/abs/2106.09494)
+
+## Determinants of COVID-19 Patient Outcomes in the University of Pennsylvania Health System
+* MedRxiv Pre-Print: [Determinants of hospital outcomes for COVID-19 infections in a large Pennsylvania Health System](https://www.medrxiv.org/content/10.1101/2021.09.08.21263311v1)
+
+## Convalescent Plasma COVID-19 Clinical Trial
+* Journal of Clinical Investigation article link: [A randomized controlled study of convalescent plasma for individuals hospitalized with COVID-19 pneumonia](https://www.jci.org/articles/view/155114)
+
+
+
+
+
+

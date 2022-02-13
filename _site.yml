@@ -15,6 +15,8 @@ navbar:
       href: about.html
     - text: "About"
       href: index.html
+    - text: "Research"
+      href: Research.html
     - icon: fa-twitter fa-lg
       href: https://twitter.com/jyang29?lang=en
     - text: "CV"
