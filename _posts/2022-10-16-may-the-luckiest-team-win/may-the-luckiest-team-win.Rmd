@@ -2,7 +2,7 @@
 title: "May the Luckiest Team Win: Musings on the Seldom Acknowledged Importance of of Luck in Sports"
 author:
   - name: Jasper Yang
-date: 10-18-2022
+date: 10-16-2022
 output:
   distill::distill_article:
     self_contained: false
