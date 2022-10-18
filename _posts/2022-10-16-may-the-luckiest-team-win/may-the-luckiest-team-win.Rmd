@@ -1,5 +1,5 @@
 ---
-title: "May the luckiest team win: playoffs, luck, and clutchness"
+title: "May the Luckiest Team Win: Musings on the Seldom Acknowledged Importance of of Luck in Sports"
 author:
   - name: Jasper Yang
 date: 10-18-2022
